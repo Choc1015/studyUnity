@@ -12,7 +12,7 @@ public class TestCollision : MonoBehaviour
         Debug.Log($"Collision @{collision.gameObject.name}!!");
     }
 
-    // 1) 둘 다 Collider가 있어야 한다
+    // 1) 둘 다 Collider가 있어야 한다 
     // 2) 둘 중 하나는 IsTrigger : On
     // 3) 둘 중 하나는 RigidBody가 있어야 한다. 
     private void OnTriggerEnter(Collider other)
@@ -27,10 +27,11 @@ public class TestCollision : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward, Color.red);
-        if(Physics.Raycast(transform.position, transform.forward))
-        {
-            Debug.Log("Raycast!!");
-        }
+        // Local <-> World <-> Viewport <-> Screen ( 화면 ) 
+
+        //Debug.Log(Input.mousePosition); //Screen
+
+        Debug.Log(Camera.main.ScreenToViewportPoint( Input.mousePosition ) ); // Viewport (Screen 픽셀 화면을 0부터 1사이 값으로 수치화 비율화
+         
     }
 }
