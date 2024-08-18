@@ -285,7 +285,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &769211235
+--- !u!1001 &815174771
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -293,37 +293,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 226826487603353038, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_Color.b
-      value: 0.44977567
-      objectReference: {fileID: 0}
-    - target: {fileID: 226826487603353038, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 226826487603353038, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_Color.r
-      value: 0.23921567
-      objectReference: {fileID: 0}
     - target: {fileID: 3035419338224419130, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
       propertyPath: m_Name
       value: UI_Button
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403844934288819801, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1038.4749
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403844934288819801, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 571.5193
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403844934288819801, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -159.9958
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403844934288819801, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -3.61
       objectReference: {fileID: 0}
     - target: {fileID: 6059613584807156087, guid: 529a25f4fa88776408c85a0d73bf7712, type: 3}
       propertyPath: m_Pivot.x
@@ -2928,4 +2900,4 @@ SceneRoots:
   - {fileID: 868091028}
   - {fileID: 317582980}
   - {fileID: 1278297893}
-  - {fileID: 769211235}
+  - {fileID: 815174771}

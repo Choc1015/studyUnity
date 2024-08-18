@@ -21,7 +21,7 @@ public class UI_Button : UI_Popup
 
     enum Images
     {
-        ItemIcon,
+       
     }
 
     enum GameObjects
@@ -43,8 +43,8 @@ public class UI_Button : UI_Popup
         Bind<GameObject>(typeof(GameObjects));
 
         GetButton((int)Buttons.PointButton).gameObject.AddUIEvent(OnButtonCliked);
-        GameObject go = GetImage((int)Images.ItemIcon).gameObject;
-        AddUIEvent(go, (PointerEventData data) => { go.transform.position = data.position; }, Define.UIEvent.Drag);
+        //GameObject go = GetImage((int)Images.ItemIcon).gameObject;
+        //AddUIEvent(go, (PointerEventData data) => { go.transform.position = data.position; }, Define.UIEvent.Drag);
     }
 
     int _score = 0;
