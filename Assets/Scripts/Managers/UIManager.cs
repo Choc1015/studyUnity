@@ -39,12 +39,21 @@ public class UIManager
         }
     }
 
+    public T MakeSubItem<T>(string name = null) where T : UI_Base
+    {
+        if (string.IsNullOrEmpty(name))
+            name = typeof(T).Name;
+
+        GameObject go = Managers.Resource.Instantiate($"UI/SubItem/{name}");
+        return Util.GetOrAddComponent<T>(go);
+    }
+
     public T ShowSceneUI<T>(string name = null) where T : UI_Scene // UI_Scene만 안에 받는다. 
     {
         if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
 
-        GameObject go = Managers.Resource.Instantiate($"UI/Popup/{name}");
+        GameObject go = Managers.Resource.Instantiate($"UI/Scene/{name}");
         T sceneUI = Util.GetOrAddComponent<T>(go);
         _sceneUI = sceneUI;
 
