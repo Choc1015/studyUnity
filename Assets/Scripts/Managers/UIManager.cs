@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager 
+public class UIManager
 {
     int _order = 10;
 
@@ -44,7 +44,7 @@ public class UIManager
         if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
 
-        
+
 
         GameObject go = Managers.Resource.Instantiate($"UI/SubItem/{name}");
         if (parent != null)
@@ -69,7 +69,7 @@ public class UIManager
 
     public T ShowPopupUI<T>(string name = null) where T : UI_Popup // UI_Popup만 안에 받는다. 
     {
-        if(string.IsNullOrEmpty(name))
+        if (string.IsNullOrEmpty(name))
             name = typeof(T).Name;
 
         GameObject go = Managers.Resource.Instantiate($"UI/Popup/{name}");
@@ -80,12 +80,12 @@ public class UIManager
 
         return popup;
     }
-    public void ClosePopupUI(UI_Popup popup) 
+    public void ClosePopupUI(UI_Popup popup)
     {
         if (_popupStack.Count == 0)
             return;
 
-        if(_popupStack.Peek() != popup)
+        if (_popupStack.Peek() != popup)
         {
             Debug.LogError("Close Popup Failed!");
             return;
@@ -111,4 +111,11 @@ public class UIManager
         while (_popupStack.Count > 0)
             ClosePopupUI();
     }
+
+    public void Clear()
+    {
+        CloseAllPopupUI();
+        _sceneUI = null;
+    }
+
 }
